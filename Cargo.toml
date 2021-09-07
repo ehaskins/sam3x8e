@@ -1,0 +1,23 @@
+[package]
+name = "sam3x8e"
+authors = ["Eric Haskins <eric@ehaskins.com>"]
+version = "0.1.0"
+edition = "2018"
+license = "MIT"
+keywords = ["sam3x", "sam3x8e", "no_std", "embedded", "svd2rust"]
+readme = "README.md"
+description =  "Bindings for sam3x8e"
+
+[lib]
+test = false
+
+[dependencies]
+cortex-m = "0.7"
+vcell = "0.1.2"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.13"
+
+[features]
+rt = ["cortex-m-rt/device"]
